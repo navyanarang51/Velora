@@ -1,0 +1,317 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Poppins, sans-serif;
+    background: #f7f5f0;
+    color: #222;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+nav {
+    height: 80px;
+    padding: 0 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f7f5f0;
+}
+
+.logo {
+    font-size: 25px;
+    letter-spacing: 6px;
+    font-weight: 500;
+}
+.logo img {
+    width: 200px;
+    height: auto;
+}
+
+.links {
+    display: flex;
+    gap: 35px;
+}
+
+.links a,
+.bag {
+    font-size: 13px;
+}
+
+.links a:hover,
+.bag:hover {
+    color: #777;
+}
+
+.hero {
+    height: calc(100vh - 80px);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero:after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, .3);
+}
+
+.hero-text {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 9%;
+    transform: translateY(-50%);
+    color: white;
+}
+
+.hero-text > p:first-child {
+    font-size: 11px;
+    letter-spacing: 3px;
+}
+
+.hero h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 75px;
+    font-weight: 400;
+    line-height: 1;
+    margin: 20px 0;
+}
+
+.hero h1 i {
+    font-weight: 400;
+}
+
+.desc {
+    font-size: 14px;
+    max-width: 350px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background: white;
+    color: #222;
+    padding: 14px 25px;
+    font-size: 12px;
+}
+
+.btn:hover {
+    background: #222;
+    color: white;
+}
+
+.collection,
+.featured {
+    padding: 100px 7%;
+}
+
+.small-title {
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: #777;
+}
+
+.collection h2,
+.featured h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 50px;
+    font-weight: 400;
+    margin: 10px 0 40px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    overflow: hidden;
+}
+
+.card img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    transition: .5s;
+}
+
+.card:hover img {
+    transform: scale(1.05);
+}
+
+.card h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 28px;
+    font-weight: 400;
+    margin-top: 15px;
+}
+
+.card p {
+    font-size: 11px;
+    color: #777;
+    margin-top: 5px;
+}
+
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: #e5e0d8;
+}
+
+.about-image {
+    height: 650px;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10%;
+}
+
+.about-text h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 65px;
+    font-weight: 400;
+    line-height: 1;
+    margin: 20px 0;
+}
+
+.about-text h2 i {
+    color: #777;
+}
+
+.about-text > p:not(.small-title) {
+    font-size: 13px;
+    line-height: 1.8;
+    color: #666;
+    max-width: 400px;
+}
+
+.dark {
+    background: #222;
+    color: white;
+    margin-top: 30px;
+    width: max-content;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.product img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.product h3 {
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 12px;
+}
+
+.product p {
+    font-size: 12px;
+    color: #777;
+    margin-top: 5px;
+}
+
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 70px 20px;
+}
+
+footer h2 {
+    letter-spacing: 7px;
+    font-size: 25px;
+}
+
+footer > p {
+    font-size: 12px;
+    color: #aaa;
+    margin: 15px 0 25px;
+}
+
+footer div {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+footer div a {
+    font-size: 11px;
+}
+
+.copyright {
+    border-top: 1px solid #444;
+    padding-top: 20px;
+    margin-top: 40px !important;
+}
+
+@media (max-width: 700px) {
+    .links {
+        display: none;
+    }
+
+    nav {
+        padding: 0 5%;
+    }
+
+    .hero-text {
+        left: 7%;
+    }
+
+    .hero h1 {
+        font-size: 50px;
+    }
+
+    .cards,
+    .about,
+    .products {
+        grid-template-columns: 1fr;
+    }
+
+    .card img,
+    .product img {
+        height: 450px;
+    }
+
+    .about-image {
+        height: 450px;
+    }
+
+    .about-text h2 {
+        font-size: 50px;
+    }
+
+    .collection,
+    .featured {
+        padding: 70px 5%;
+    }
+}
+
