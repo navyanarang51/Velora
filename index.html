@@ -14,7 +14,13 @@
 <body>
 
 <div class="loader">
-    <div class="loader-logo">velora<span>.</span></div>
+    <div class="loader-content">
+        <div class="loader-logo">velora<span>.</span></div>
+        <div class="loader-line">
+            <div class="loader-progress"></div>
+        </div>
+        <p>LOADING COLLECTION</p>
+    </div>
 </div>
 
 <div class="announcement">
@@ -36,10 +42,12 @@
     </nav>
 
     <div class="header-right">
-        <a href="#" class="search">Search</a>
-        <a href="#shop">Bag <span id="bag-count">0</span></a>
-        <button class="menu-btn" id="menu-btn">☰</button>
-    </div>
+    <a href="#" class="search">Search</a>
+    <a href="login.html" id="login-link">Login</a>
+    <a href="signup.html" id="signup-link">Sign Up</a>
+    <a href="#shop">Bag <span id="bag-count">0</span></a>
+    <button class="menu-btn" id="menu-btn">☰</button>
+</div>
 
 </header>
 
@@ -246,8 +254,13 @@
 
                 <img src="images/dress.jpg" alt="Cloud Dress">
 
-                <button class="add" data-product="Cloud Dress">
-                    ADD TO BAG <span>+</span>
+                
+                <button class="add"
+                data-product="Cloud Dress"
+                data-price="7900"
+                data-category="DRESSES"
+                data-image="images/dress.jpg">
+                ADD TO BAG <span>+</span>
                 </button>
 
             </div>
@@ -275,9 +288,13 @@
 
                 <img src="images/skirt.jpg" alt="Lace Mini">
 
-                <button class="add" data-product="Lace Mini">
-                    ADD TO BAG <span>+</span>
-                </button>
+                <button class="add"
+                data-product="Lace Mini"
+                data-price="4800"
+                data-category="SKIRTS"
+                data-image="images/skirt.jpg">
+                ADD TO BAG <span>+</span>
+                </button>               
 
             </div>
 
@@ -304,9 +321,13 @@
 
                 <img src="images/jeans.jpg" alt="Low Rise Denim">
 
-                <button class="add" data-product="Low Rise Denim">
-                    ADD TO BAG <span>+</span>
-                </button>
+                <button class="add"
+data-product="Low Rise Denim"
+data-price="5600"
+data-category="DENIM"
+data-image="images/jeans.jpg">
+ADD TO BAG <span>+</span>
+</button>
 
             </div>
 
@@ -333,9 +354,13 @@
 
                 <img src="images/heels.jpg" alt="Chocolate Heels">
 
-                <button class="add" data-product="Chocolate Heels">
-                    ADD TO BAG <span>+</span>
-                </button>
+                <button class="add"
+data-product="Chocolate Heels"
+data-price="6500"
+data-category="FOOTWEAR"
+data-image="images/heels.jpg">
+ADD TO BAG <span>+</span>
+</button>
 
             </div>
 
@@ -508,7 +533,7 @@
             <a href="#">Size Guide</a>
             <a href="#">Contact</a>
 
-        </div>
+        </div> 
 
         <div class="footer-column">
 

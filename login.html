@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>VELORA — Login</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Pacifico&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+<div class="auth-page">
+
+<div class="auth-image">
+<img src="images/campaign.jpg" alt="Velora Fashion">
+<div class="image-overlay"></div>
+
+<a href="index.html" class="image-logo">velora<span>.</span></a>
+
+<div class="image-content">
+<p>VELORA · 2026</p>
+<h2>Dress like<br>you <em>mean it.</em></h2>
+</div>
+</div>
+
+<div class="auth-section">
+
+<a href="index.html" class="logo">velora<span>.</span></a>
+
+<div class="auth-box">
+
+<div class="tabs">
+<button class="tab active" id="loginTab">LOGIN</button>
+<button class="tab" id="signupTab">CREATE ACCOUNT</button>
+</div>
+
+<div id="loginForm">
+
+<p class="label">WELCOME BACK</p>
+<h1>Good to see<br>you <em>again.</em></h1>
+
+<p class="intro">Sign in to continue shopping with Velora.</p>
+
+<form>
+
+<label>Email address</label>
+<input type="email" id="loginEmail" placeholder="you@example.com" required>
+
+<label>Password</label>
+
+<div class="password-wrap">
+<input type="password" id="loginPassword" placeholder="Enter your password" required>
+<button type="button" class="show-password" onclick="togglePassword('loginPassword',this)">SHOW</button>
+</div>
+
+<div class="form-row">
+<label class="remember">
+<input type="checkbox">
+<span>Remember me</span>
+</label>
+
+<a href="#" class="forgot">Forgot password?</a>
+</div>
+
+<button type="submit" class="submit-btn">LOGIN <span>↗</span></button>
+
+<p class="message" id="loginMessage"></p>
+
+</form>
+
+<p class="switch-text">New to Velora? <button id="switchSignup">Create an account</button></p>
+
+</div>
+
+<div id="signupForm" class="hidden">
+
+<p class="label">JOIN VELORA</p>
+<h1>Your wardrobe<br>starts <em>here.</em></h1>
+
+<p class="intro">Create your Velora account and make every outfit count.</p>
+
+<form>
+
+<label>Full name</label>
+<input type="text" id="name" placeholder="Your name" required>
+
+<label>Email address</label>
+<input type="email" id="signupEmail" placeholder="you@example.com" required>
+
+<label>Password</label>
+
+<div class="password-wrap">
+<input type="password" id="signupPassword" placeholder="Create a password" minlength="8" required>
+<button type="button" class="show-password" onclick="togglePassword('signupPassword',this)">SHOW</button>
+</div>
+
+<label>Confirm password</label>
+
+<input type="password" id="confirmPassword" placeholder="Confirm your password" minlength="8" required>
+
+<label class="terms">
+<input type="checkbox" required>
+<span>I agree to the Velora terms & privacy policy.</span>
+</label>
+
+<button type="submit" class="submit-btn">CREATE ACCOUNT <span>↗</span></button>
+
+<p class="message" id="signupMessage"></p>
+
+</form>
+
+<p class="switch-text">Already have an account? <button id="switchLogin">Login</button></p>
+
+</div>
+
+</div>
+
+<p class="copyright">© 2026 VELORA · ALL RIGHTS RESERVED</p>
+
+</div>
+
+</div>
+
+<script src="login.js"></script>
+
+</body>
+</html>
