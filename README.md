@@ -1,161 +1,50 @@
-# VELORA ✦
+# VELORA | More Than Fashion — It's Your Style.
 
-### Contemporary Fashion. Effortless Style.
+VELORA is a fashion e-commerce frontend project designed around a modern luxury shopping experience. It combines an editorial-inspired interface, curated fashion collections, interactive UI elements, and a personalized **Style Studio Quiz** to help users explore their fashion preferences.
 
-Velora is a modern fashion e-commerce website designed around a clean editorial aesthetic, soft earthy tones, playful typography, and immersive fashion imagery.
+## ✨ Features
 
-The website combines a premium fashion-store layout with subtle animations, interactive elements, and a minimal yet expressive visual identity.
+### 🛍️ Fashion Homepage
+- Luxury-inspired design with a beige, brown, and neutral colour palette.
+- Editorial hero section with visual storytelling.
+- Category cards and curated product collections.
+- Product showcase featuring dresses, skirts, denim, and footwear.
+- Brand story and campaign sections.
+- Newsletter subscription interface.
+- Responsive navigation and footer.
 
----
+### 🎨 Style Studio Quiz
+- Dedicated quiz page separate from the homepage.
+- Interactive, multi-step quiz with 10 questions.
+- Explore different fashion aesthetics, including Soft Girl, Old Money, Minimal Chic, Coquette, Streetwear, Romantic, and Edgy.
+- Discover preferred colour palettes, outfit silhouettes, accessories, and style moods.
+- Select a preferred shopping budget and occasion.
+- Personalized style profile and outfit recommendations.
+- Dynamic progress bar and answer selection.
+- Back and next navigation with answer validation.
+- Retake functionality to restart the quiz.
+- Responsive layout for desktop and mobile devices.
 
-## ✦ Preview
+### ⚡ Interactive Elements
+- Mobile navigation menu.
+- Product interactions and bag counter.
+- Wishlist interface.
+- Newsletter feedback messages.
+- Toast notifications.
+- Smooth scrolling and back-to-top functionality.
+- Theme toggle, where implemented.
 
-Velora features a fashion-focused landing page with:
+## 🛠️ Tech Stack
 
-- Editorial hero section
-- New season announcement
-- Collection showcase
-- Featured products
-- Interactive shopping bag
-- Wishlist buttons
-- Marquee announcements
-- Newsletter subscription
-- Responsive navigation
-- Smooth scrolling
-- Scroll reveal animations
-- Back-to-top interaction
-- Responsive design for different screen sizes
+- **HTML5** — Page structure and semantic markup.
+- **CSS3** — Layout, styling, animations, and responsive design.
+- **JavaScript** — Interactive components, quiz logic, and dynamic recommendations.
+- **Google Fonts** — Editorial typography.
+- **Visual Studio Code** — Development environment.
 
----
+No frontend framework or additional JavaScript library is required for the Style Studio Quiz.
 
-## ✦ Design Direction
-
-The visual identity of Velora is inspired by contemporary fashion editorials and modern lifestyle brands.
-
-### Color Palette
-
-- Warm Beige
-- Soft Cream
-- Espresso Brown
-- Muted Olive
-- Off White
-- Charcoal
-
-The palette keeps the interface elegant while allowing the fashion imagery to remain the main focus.
-
-### Typography
-
-The website combines:
-
-- Clean sans-serif typography for navigation and UI
-- Elegant serif/italic typography for editorial headings
-- Playful handwritten styling for the Velora logo
-
-This creates a balance between **premium fashion** and a slightly youthful personality.
-
----
-
-## ✦ Features
-
-### 🖼 Editorial Hero
-
-A full-screen hero section introduces the latest Velora collection with:
-
-- Campaign imagery
-- Season label
-- Editorial headline
-- CTA button
-- Collection navigation
-- Scroll indicator
-
----
-
-### 🛍 Product Collection
-
-The product section includes fashion categories such as:
-
-- Dresses
-- Skirts
-- Denim
-- Footwear
-- Accessories
-
-Each product card includes:
-
-- Product image
-- Category
-- Product name
-- Price
-- Wishlist button
-- Add to Bag button
-- Product badges
-
----
-
-### 👜 Interactive Shopping Bag
-
-Users can add products to the shopping bag.
-
-The bag counter updates dynamically using JavaScript.
-
-Example:
-
-`Bag (0)` → `Bag (1)` → `Bag (2)`
-
----
-
-### ♡ Wishlist
-
-Products can be added or removed from the wishlist using the heart button.
-
-The button changes between:
-
-`♡` → `♥`
-
----
-
-### ✦ Marquee Sections
-
-Animated marquee text is used to create movement throughout the page and reinforce the brand identity.
-
-Example:
-
-`VELORA • NEW SEASON • EVERYDAY BUT BETTER • VELORA • NEW SEASON`
-
----
-
-### 📩 Newsletter
-
-A newsletter section allows users to enter their email address and receive a confirmation message after submitting the form.
-
-Basic client-side email validation is included.
-
----
-
-### 📱 Responsive Design
-
-The website is designed to adapt to:
-
-- Desktop
-- Tablet
-- Mobile
-
-The navigation changes into a mobile menu on smaller screens.
-
----
-
-## ✦ Tech Stack
-
-| Technology | Usage |
-|------------|-------|
-| HTML5 | Website structure |
-| CSS3 | Styling, layouts and animations |
-| JavaScript | Interactions and dynamic elements |
-| Google Fonts | Typography |
-
----
-
-## ✦ Project Structure
+## 📁 Project Structure
 
 ```text
 VELORA/
@@ -164,12 +53,96 @@ VELORA/
 ├── style.css
 ├── script.js
 │
+├── quiz.html
+├── quiz.css
+├── quiz.js
+│
+├── cart.html
+├── cart.css
+├── cart.js
+│
+├── login.html
+├── login.css
+├── login.js
+│
 ├── images/
-│   ├── hero.jpg
 │   ├── dress.jpg
 │   ├── skirt.jpg
 │   ├── jeans.jpg
-│   ├── heels.jpg
-│   └── editorial.jpg
+│   └── heels.jpg
+│
+├── videos/
+│   └── main.mp4
 │
 └── README.md
+```
+
+*Note: The structure above lists the expected project files. Keep only files and assets that actually exist in your repository.*
+
+## 🚀 Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone <your-repository-url>
+```
+
+### 2. Open the project
+
+Open the VELORA folder in Visual Studio Code.
+
+### 3. Run the website
+
+Use the **Live Server** extension in VS Code and open `index.html`.
+
+Alternatively, open `index.html` directly in your browser.
+
+### 4. Explore the Style Studio
+
+Click the **Quiz** link in the navigation bar to open `quiz.html`.
+
+Answer all 10 questions to view your personalized style profile and product recommendations.
+
+## 🎯 Quiz Recommendation Logic
+
+The Style Studio uses JavaScript to evaluate selected answers and generate a style profile.
+
+- **Aesthetic:** Identifies the dominant fashion style based on selected preferences.
+- **Colour palette:** Displays a coordinated colour scheme.
+- **Mood:** Reflects the user's selected fashion mood.
+- **Budget:** Filters sample products according to the selected price range.
+- **Occasion:** Influences product recommendation scoring.
+- **Style edit:** Displays matching products from the available sample collection.
+
+The quiz currently uses predefined questions, style profiles, product data, and local image paths. It does not use AI, a backend, or a live product database.
+
+## 📱 Responsive Design
+
+The interface includes responsive layouts for smaller screens, including:
+- Flexible navigation.
+- Mobile-friendly question cards.
+- Responsive result and product grids.
+- Adjusted typography and spacing for mobile devices.
+
+## 🔮 Future Improvements
+
+- Connect products to a shared product catalogue.
+- Add individual product detail pages.
+- Implement a functional shopping cart and checkout flow.
+- Add product search, filters, and category pages.
+- Store quiz results and user preferences.
+- Add authentication and backend integration.
+- Improve personalized recommendations using a larger product catalogue.
+- Integrate a newsletter subscription service.
+
+## 👩‍💻 Project Information
+
+**Project:** VELORA — Fashion E-commerce Frontend  
+**Category:** Web Development / Frontend Development  
+**Technologies:** HTML, CSS, JavaScript
+
+**Tagline:** More Than Fashion — It's Your Style.
+
+---
+
+*VELORA is a frontend project created to explore fashion-focused UI design, responsive web development, and interactive user experiences.*
