@@ -13,11 +13,36 @@ const newsletterMessage=document.querySelector("#newsletter-message");
 const loginLink=document.querySelector("#login-link");
 const signupLink=document.querySelector("#signup-link");
 
+const loaderPercent=document.querySelector("#loader-percent");
+
+let progress=0;
+
+const loaderTimer=setInterval(()=>{
+
+progress+=1;
+
+if(loaderPercent){
+    loaderPercent.textContent=progress+"%";
+}
+
+if(progress>=100){
+    clearInterval(loaderTimer);
+}
+
+},30);
+
 window.addEventListener("load",()=>{
-    setTimeout(()=>{
-        loader.classList.add("hidden");
-        document.body.classList.add("loaded");
-    },3000);
+
+setTimeout(()=>{
+
+if(loader){
+    loader.classList.add("hidden");
+}
+
+document.body.classList.add("loaded");
+
+},3000);
+
 });
 
 window.addEventListener("scroll",()=>{
@@ -215,4 +240,84 @@ document.querySelectorAll('a[href^="#"]').forEach(link=>{
 
     });
 
+});
+
+const checkoutBtn = document.querySelector("#checkout-btn");
+
+if (checkoutBtn) {
+    checkoutBtn.addEventListener("click", () => {
+
+        const isLoggedIn = localStorage.getItem("veloraLoggedIn") === "true";
+
+        if (isLoggedIn) {
+            window.location.href = "checkout.html";
+        } else {
+            localStorage.setItem("redirectAfterLogin", "checkout.html");
+            window.location.href = "login.html";
+        }
+
+    });
+}
+
+const themeToggle=document.querySelector("#theme-toggle");
+
+if(themeToggle){
+
+const savedTheme=localStorage.getItem("veloraTheme");
+
+if(savedTheme==="dark"){
+    document.body.classList.add("dark-mode");
+    themeToggle.textContent="☀";
+}else{
+    themeToggle.textContent="☾";
+}
+
+themeToggle.addEventListener("click",()=>{
+
+    document.body.classList.toggle("dark-mode");
+
+    const isDark=document.body.classList.contains("dark-mode");
+
+    localStorage.setItem(
+        "veloraTheme",
+        isDark ? "dark" : "light"
+    );
+
+    themeToggle.textContent=isDark ? "☀" : "☾";
+
+});
+
+}
+
+const themeBtn=document.querySelector("#theme-btn");
+
+let savedTheme=localStorage.getItem("veloraTheme")||"light";
+
+document.documentElement.setAttribute("data-theme",savedTheme);
+
+if(themeBtn){
+themeBtn.textContent=savedTheme==="dark"?"☀":"☾";
+
+themeBtn.addEventListener("click",()=>{
+
+savedTheme=savedTheme==="light"?"dark":"light";
+
+document.documentElement.setAttribute("data-theme",savedTheme);
+
+localStorage.setItem("veloraTheme",savedTheme);
+
+themeBtn.textContent=savedTheme==="dark"?"☀":"☾";
+
+});
+}
+
+menuBtn.addEventListener("click", () => {
+    const isOpen = mobileMenu.classList.toggle("open");
+
+    menuBtn.classList.toggle("active", isOpen);
+    menuBtn.setAttribute("aria-expanded", isOpen);
+    menuBtn.setAttribute(
+        "aria-label",
+        isOpen ? "Close navigation menu" : "Open navigation menu"
+    );
 });

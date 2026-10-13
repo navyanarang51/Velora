@@ -60,8 +60,15 @@ localStorage.setItem("veloraLoggedIn","true");
 message.textContent="Login successful. Welcome back ✦";
 
 setTimeout(()=>{
-    window.location.href="index.html";
-},1000);
+        const redirectPage=localStorage.getItem("redirectAfterLogin");
+
+        if(redirectPage){
+            localStorage.removeItem("redirectAfterLogin");
+            window.location.href=redirectPage;
+        }else{
+            window.location.href="index.html";
+        }
+    },1000);
 
 document.querySelector("#signupForm form").addEventListener("submit",function(e){
 

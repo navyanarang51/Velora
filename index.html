@@ -15,11 +15,23 @@
 
 <div class="loader">
     <div class="loader-content">
-        <div class="loader-logo">velora<span>.</span></div>
-        <div class="loader-line">
-            <div class="loader-progress"></div>
+        <div class="loader-top">
+            <span>VELORA</span>
+            <span>AW26</span>
         </div>
-        <p>LOADING COLLECTION</p>
+
+        <div class="loader-logo">
+            velora<span>.</span>
+        </div>
+
+        <div class="loader-progress">
+            <div class="loader-fill"></div>
+        </div>
+
+        <div class="loader-bottom">
+            <span>NEW SEASON</span>
+            <span id="loader-percent">0%</span>
+        </div>
     </div>
 </div>
 
@@ -30,39 +42,78 @@
     </div>
 </div>
 
+
 <header id="header">
 
-    <a href="#" class="logo">velora<span>.</span></a>
+    <a href="#new" class="logo">velora<span>.</span></a>
 
-    <nav>
-        <a href="#new">New In</a>
+    <nav class="desktop-nav">
         <a href="#shop">Shop</a>
-        <a href="#edit">The Edit</a>
+        <a href="quiz.html">Quiz</a>
+        <a href="#search">Search</a>
         <a href="#story">About</a>
     </nav>
 
     <div class="header-right">
-    <a href="#" class="search">Search</a>
-    <a href="login.html" id="login-link">Login</a>
-    <a href="signup.html" id="signup-link">Sign Up</a>
-    <a href="#shop">Bag <span id="bag-count">0</span></a>
-    <button class="menu-btn" id="menu-btn">☰</button>
-</div>
+
+        <a href="cart.html" class="bag-link">
+            Bag <span id="bag-count">0</span>
+        </a>
+
+        <a href="login.html" id="login-link">Login</a>
+
+        <a href="login.html" id="signup-link">Sign Up</a>
+
+        <button
+            class="theme-btn"
+            id="theme-btn"
+            type="button"
+            aria-label="Toggle light and dark mode">
+            ☾
+        </button>
+
+        <button
+            class="menu-btn"
+            id="menu-btn"
+            type="button" aria-label="Open navigation menu"
+        aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+    </div>
 
 </header>
 
+
+
 <div class="mobile-menu" id="mobile-menu">
-    <a href="#new">New In</a>
-    <a href="#shop">Shop</a>
-    <a href="#edit">The Edit</a>
-    <a href="#story">About</a>
+
+    <a href="#shop">Shop <span>↗</span></a>
+
+    <a href="#quiz">Quiz <span>↗</span></a>
+
+    <a href="#search">Search <span>↗</span></a>
+
+    <a href="#story">About <span>↗</span></a>
+
+    <a href="cart.html">Bag <span>↗</span></a>
+
+    <a href="login.html" id="mobile-login">Login <span>↗</span></a>
+
+    <a href="login.html" id="mobile-signup">Sign Up <span>↗</span></a>
+
 </div>
+
 
 <main>
 
 <section class="hero" id="new">
 
-    <img src="images/hero.jpg" alt="Velora white dress">
+    <video class="hero-video" autoplay muted loop playsinline>
+    <source src="videos/main.mp4" type="video/mp4">
+</video>
 
     <div class="hero-shade"></div>
 
