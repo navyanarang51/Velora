@@ -130,7 +130,6 @@ shared for the project; update it if the repository changes.
 git clone https://github.com/navyanarang51/Velora
 ```
 
-Replace `<your-repository-url>` with the URL of your GitHub repository.
 
 ### 2. Open the project
 
