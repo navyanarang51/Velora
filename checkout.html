@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VELORA | Checkout</title>
+
+    <link rel="stylesheet" href="checkout.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+    <a href="index.html" class="logo">VELORA<span>.</span></a>
+    <a href="cart.html" class="back-link">← BACK TO BAG</a>
+</header>
+
+<main>
+    <p class="eyebrow">ALMOST YOURS</p>
+    <h1>Check <em>out.</em></h1>
+
+    <div class="checkout-grid" id="checkout-grid">
+
+        <!-- DELIVERY DETAILS -->
+        <section class="card">
+            <h2>Delivery details</h2>
+
+            <form id="checkout-form">
+
+                <label>
+                    Full name
+                    <input
+                        type="text"
+                        name="fullName"
+                        placeholder="Enter your full name"
+                        autocomplete="name"
+                        required
+                    >
+                </label>
+
+                <label>
+                    Email address
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="Enter your email address"
+                        autocomplete="email"
+                        required
+                    >
+                </label>
+
+                <label>
+                    Phone number
+                    <input
+                        type="tel"
+                        name="phone"
+                        placeholder="Enter your 10-digit phone number"
+                        pattern="[0-9]{10}"
+                        maxlength="10"
+                        inputmode="numeric"
+                        autocomplete="tel"
+                        required
+                    >
+                </label>
+
+                <label>
+                    Complete address
+                    <input
+                        type="text"
+                        name="address"
+                        placeholder="House no., street, area"
+                        autocomplete="street-address"
+                        required
+                    >
+                </label>
+
+                <div class="two-col">
+                    <label>
+                        City
+                        <input
+                            type="text"
+                            name="city"
+                            placeholder="Enter your city"
+                            autocomplete="address-level2"
+                            required
+                        >
+                    </label>
+
+                    <label>
+                        PIN code
+                        <input
+                            type="text"
+                            id="pincode"
+                            name="pin"
+                            placeholder="6-digit PIN"
+                            pattern="[0-9]{6}"
+                            maxlength="6"
+                            inputmode="numeric"
+                            autocomplete="postal-code"
+                            required
+                        >
+                    </label>
+                </div>
+
+                <p id="delivery-message" class="note" aria-live="polite"></p>
+
+                <label>
+                    State
+                    <input
+                        type="text"
+                        name="state"
+                        placeholder="Enter your state"
+                        autocomplete="address-level1"
+                        required
+                    >
+                </label>
+
+                <h2>Payment method</h2>
+
+                <label class="payment">
+                    <input type="radio" name="payment" value="COD" required>
+                    <span>Cash on Delivery</span>
+                </label>
+
+                <label class="payment">
+                    <input type="radio" name="payment" value="UPI" required>
+                    <span>UPI (demo only)</span>
+                </label>
+
+                <p class="note">
+                    This is a demo checkout. No real payment will be processed.
+                </p>
+
+                <button type="submit" class="primary">
+                    PLACE ORDER →
+                </button>
+
+            </form>
+        </section>
+
+        <!-- ORDER SUMMARY -->
+        <aside class="card order-summary">
+
+            <h2>Your order</h2>
+
+            <div id="summary-lines"></div>
+
+            <div class="checkout-summary">
+
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <span id="sum-subtotal">₹0</span>
+                </div>
+
+                <div class="summary-row discount-row">
+                    <span>Discount</span>
+                    <span id="sum-discount">₹0</span>
+                </div>
+
+                <div class="summary-row">
+                    <span>Shipping</span>
+                    <span id="sum-shipping">₹0</span>
+                </div>
+
+                <div class="summary-row">
+                    <span>Gift packaging</span>
+                    <span id="sum-gift">₹0</span>
+                </div>
+
+                <div class="summary-row total-row">
+                    <span>Total</span>
+                    <span id="sum-total">₹0</span>
+                </div>
+
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- ORDER CONFIRMATION -->
+    <section id="confirmation" class="confirmation card" hidden>
+        <h2>Order placed! ♡</h2>
+        <p id="order-id"></p>
+        <p>Total: <strong id="confirmed-total"></strong></p>
+        <a href="index.html" class="primary">CONTINUE SHOPPING</a>
+    </section>
+
+    <!-- EMPTY CART -->
+    <section id="empty-state" class="empty card" hidden>
+        <h2>Your bag is empty.</h2>
+        <p>Your next favourite piece is waiting.</p>
+        <a href="index.html" class="primary">CONTINUE SHOPPING</a>
+    </section>
+
+</main>
+
+<script src="checkout.js"></script>
+
+</body>
+</html>
