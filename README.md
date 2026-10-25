@@ -127,7 +127,7 @@ shared for the project; update it if the repository changes.
 ### 1. Clone the repository
 
 ``` bash
-git clone <https://github.com/navyanarang51/Velora>
+git clone https://github.com/navyanarang51/Velora
 ```
 
 Replace `<your-repository-url>` with the URL of your GitHub repository.
