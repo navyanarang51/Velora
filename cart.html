@@ -1,76 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VELORA — Your Bag</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Pacifico&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="cart.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#faf8f3">
+    <meta name="description" content="Review your selected VELORA pieces, gift options and order total.">
+    <title>VELORA — Your Bag</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="cart.css">
+    <script src="cart.js" defer></script>
 </head>
 <body>
+    <header class="site-header">
+        <a href="index.html" class="logo" aria-label="VELORA homepage">velora<span>.</span></a>
+        <nav aria-label="Main navigation">
+            <a href="index.html#new">New In</a>
+            <a href="index.html#shop">Shop</a>
+            <a href="index.html#edit">The Edit</a>
+            <a href="index.html#story">About</a>
+        </nav>
+        <a href="index.html#shop" class="continue">CONTINUE SHOPPING <span aria-hidden="true">↗</span></a>
+    </header>
 
-<header>
-<a href="index.html" class="logo">velora<span>.</span></a>
+    <main>
+        <section class="cart-head">
+            <p class="eyebrow">YOUR VELORA BAG</p>
+            <h1>Your <em>pieces.</em></h1>
+            <p class="cart-intro">Considered choices. Pieces to keep coming back to.</p>
+        </section>
 
-<nav>
-<a href="index.html#new">New In</a>
-<a href="index.html#shop">Shop</a>
-<a href="index.html#edit">The Edit</a>
-<a href="index.html#story">About</a>
-</nav>
+        <div id="cart-notice" class="cart-notice" role="status" aria-live="polite" hidden></div>
 
-<a href="index.html" class="continue">CONTINUE SHOPPING ↗</a>
-</header>
+        <section class="shipping-perk" aria-label="Free shipping progress">
+            <div class="shipping-copy">
+                <span class="shipping-icon" aria-hidden="true">✳</span>
+                <div>
+                    <p class="shipping-title">A LITTLE SOMETHING ON US</p>
+                    <p id="shipping-progress-message">Add ₹5,000 to unlock complimentary shipping.</p>
+                </div>
+            </div>
+            <div id="shipping-progress" class="progress-track" role="progressbar" aria-label="Progress towards free shipping" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                <span id="shipping-progress-fill"></span>
+            </div>
+        </section>
 
-<main>
+        <section class="cart-layout" aria-label="Shopping bag and order summary">
+            <div class="cart-column">
+                <div class="cart-column-head">
+                    <h2>YOUR SELECTION</h2>
+                    <span>PRICE IN INR</span>
+                </div>
+                <div class="cart-items" id="cart-items" aria-live="polite"></div>
 
-<section class="cart-head">
-<p>YOUR VELORA BAG</p>
-<h1>Your <em>pieces.</em></h1>
-</section>
+                <section class="gift-panel" aria-labelledby="gift-heading">
+                    <div class="gift-heading-row">
+                        <span class="gift-icon" aria-hidden="true">✧</span>
+                        <div>
+                            <p class="eyebrow">A THOUGHTFUL EXTRA</p>
+                            <h2 id="gift-heading">Make it a gift.</h2>
+                        </div>
+                    </div>
+                    <label class="gift-toggle-row">
+                        <span class="gift-copy">
+                            <strong>Signature gift packaging</strong>
+                            <small>Wrapped with care, ready to give.</small>
+                        </span>
+                        <span class="gift-price">₹149</span>
+                        <input id="gift-wrap-toggle" type="checkbox" aria-label="Add signature gift packaging">
+                    </label>
+                    <div id="gift-message-wrap" class="gift-message-wrap" hidden>
+                        <label for="gift-message">PERSONAL MESSAGE <span>(OPTIONAL)</span></label>
+                        <textarea id="gift-message" rows="3" maxlength="180" placeholder="Write a little note for them..."></textarea>
+                        <p class="field-note">Up to 180 characters. Saved in this browser for this demo.</p>
+                    </div>
+                </section>
 
-<section class="cart-layout">
+                <section id="saved-section" class="saved-section" hidden>
+                    <div class="section-heading">
+                        <p class="eyebrow">NOT RIGHT NOW?</p>
+                        <h2>Saved for <em>later.</em></h2>
+                    </div>
+                    <div id="saved-items" class="saved-items"></div>
+                </section>
+            </div>
 
-<div class="cart-items" id="cart-items"></div>
+            <aside class="summary">
+                <p class="label">ORDER SUMMARY</p>
+                <div class="summary-row"><span>Subtotal</span><strong id="subtotal">₹0</strong></div>
+                <div class="summary-row"><span>Shipping</span><strong id="shipping-cost">FREE</strong></div>
+                <div class="summary-row"><span>Gift packaging</span><strong id="gift-wrap-cost">—</strong></div>
+                <p class="shipping-note">Complimentary shipping on orders of ₹5,000 or more. Otherwise, shipping is ₹199.</p>
+                <div class="summary-line"></div>
+                <div class="summary-total"><span>Total</span><strong id="total">₹0</strong></div>
+                <p class="tax-note">Final taxes and delivery details can be confirmed at checkout.</p>
+                <button id="checkout-btn" class="checkout" type="button">
+                    <span>PROCEED TO CHECKOUT</span><span class="checkout-arrow" aria-hidden="true">↗</span>
+                </button>
+                <div class="summary-assurance"><span aria-hidden="true">◇</span><p>Thoughtfully selected. Carefully packed.</p></div>
+            </aside>
+        </section>
 
-<aside class="summary">
+        <section class="recommendations" aria-labelledby="recommendation-heading">
+            <div class="section-heading recommendation-heading">
+                <div><p class="eyebrow">THE REST OF THE STORY</p><h2 id="recommendation-heading">You may <em>also like.</em></h2></div>
+                <a href="index.html#shop" class="view-all">VIEW ALL <span aria-hidden="true">↗</span></a>
+            </div>
+            <div id="recommendation-items" class="recommendation-grid"></div>
+            <p class="demo-note">Recommendation products and stock figures are demo data. Connect your real catalogue for accurate availability.</p>
+        </section>
 
-<p class="label">ORDER SUMMARY</p>
+        <section class="service-strip" aria-label="VELORA service">
+            <div><span>01</span><p>Curated essentials</p></div>
+            <div><span>02</span><p>Considered details</p></div>
+            <div><span>03</span><p>Made for your wardrobe</p></div>
+        </section>
+    </main>
 
-<div class="summary-row">
-<span>Subtotal</span>
-<strong id="subtotal">₹0</strong>
-</div>
-
-<div class="summary-row">
-<span>Shipping</span>
-<span>FREE</span>
-</div>
-
-<div class="summary-line"></div>
-
-<div class="summary-total">
-<span>Total</span>
-<strong id="total">₹0</strong>
-</div>
-
-<button id="checkout-btn">CHECKOUT ↗</button>
-
-<p class="secure">Secure checkout · Free shipping over ₹5,000</p>
-
-</aside>
-
-</section>
-
-</main>
-
-<footer>
-<div class="footer-logo">velora<span>.</span></div>
-<p>Clothes you actually want to wear.</p>
-</footer>
-
-<script src="cart.js"></script>
+    <footer>
+        <a href="index.html" class="footer-logo">velora<span>.</span></a>
+        <p>Clothes you actually want to wear.</p>
+        <span class="footer-note">A LITTLE MORE YOU, EVERY DAY.</span>
+    </footer>
 </body>
 </html>
