@@ -1,203 +1,215 @@
-# VELORA \| More Than Fashion --- It's Your Style.
+# VELORA | More Than Fashion — It's Your Style.
 
-VELORA is a fashion e-commerce frontend project designed around a
-modern, luxury-inspired shopping experience. It combines an editorial
-interface, curated fashion imagery, interactive shopping pages, and a
-personalized **Style Studio Quiz** to help users explore their fashion
-preferences.
+VELORA is a fashion e-commerce frontend project designed to provide a modern and luxury-inspired online shopping experience. It combines an editorial-style homepage, curated fashion collections, interactive shopping pages, and a personalized **Style Studio Quiz** that helps users explore their fashion preferences.
 
-> **Tagline:** More Than Fashion --- It's Your Style.
+**Tagline:** More Than Fashion — It's Your Style.
+
+---
 
 ## ✨ Features
 
 ### 🛍️ Fashion Homepage
 
--   Luxury-inspired design with a beige, brown, and neutral colour
-    palette.
--   Editorial hero section and visual storytelling.
--   Category cards and curated fashion collections.
--   Fashion imagery featuring dresses, skirts, denim, and footwear.
--   Brand story and campaign sections.
--   Responsive navigation and footer.
--   Newsletter interface and other homepage interactions, where
-    implemented.
+- Luxury-inspired design with a beige, brown and neutral colour palette.
+- Editorial hero section with visual storytelling.
+- Fashion category cards and curated collections.
+- Fashion images and homepage video.
+- Brand story and campaign sections.
+- Responsive navigation and footer.
+- Newsletter interface.
 
 ### 🎨 Style Studio Quiz
 
--   Dedicated quiz page separate from the homepage.
--   Interactive, multi-step quiz with 10 questions.
--   Explore aesthetics such as Soft Girl, Old Money, Minimal Chic,
-    Coquette, Streetwear, Romantic, and Edgy.
--   Discover colour palettes, outfit silhouettes, accessories, and style
-    moods.
--   Choose a preferred shopping budget and occasion.
--   Personalized style profile and outfit recommendations.
--   Progress indicator, answer selection, and back/next navigation.
--   Answer validation and retake functionality.
--   Responsive layout for desktop and mobile.
+- Separate quiz page with an interactive, multi-step experience.
+- 10 questions based on fashion preferences.
+- Style options such as Soft Girl, Old Money, Minimal Chic, Coquette, Streetwear, Romantic and Edgy.
+- Questions about colour palettes, outfit silhouettes, accessories, mood, budget and occasion.
+- Personalized style profile and outfit recommendations.
+- Progress indicator with back and next navigation.
+- Answer validation and retake option.
+- Responsive layout for desktop and mobile screens.
 
 ### 🛒 Shopping and Account Pages
 
--   **Shopping bag:** view and manage selected items.
--   **Checkout:** continue through the frontend checkout flow.
--   **Wishlist:** save favourite items through the available interface.
--   **Search:** access the product-search interface.
--   **Login:** dedicated login page.
--   **Order history:** view saved order information where supported by
-    the frontend logic.
+- **Shop:** Browse available fashion products.
+- **Shopping Bag:** View and manage selected items.
+- **Checkout:** Continue through the frontend checkout flow.
+- **Wishlist:** Save favourite products.
+- **Search:** Search for available products through the search interface.
+- **Login:** Dedicated login page.
+- **Order History:** View saved order information supported by the frontend.
 
-### ⚡ Interactive Elements
+### ⚡ Other Interactive Elements
 
--   Mobile navigation menu.
--   Product interactions and bag counter.
--   Wishlist interactions.
--   Toast notifications and feedback messages.
--   Smooth scrolling and back-to-top functionality.
--   Theme toggle, where implemented.
--   Browser `localStorage` for supported frontend state, where
-    implemented.
+- Mobile navigation menu.
+- Product interactions and shopping bag counter.
+- Wishlist interactions.
+- Toast notifications and feedback messages.
+- Smooth scrolling and back-to-top functionality.
+- Browser LocalStorage for supported frontend data.
+- Theme toggle and newsletter interface.
 
-## 🛠️ Tech Stack
+---
 
--   **HTML5** --- page structure and semantic markup.
--   **CSS3** --- layouts, styling, animations, and responsive design.
--   **JavaScript** --- interactive components, quiz logic, and dynamic
-    recommendations.
--   **Google Fonts** --- typography.
--   **Visual Studio Code** --- development environment.
--   **Browser `localStorage`** --- persistence of supported demo data.
+## 🛠️ Technologies Used
 
-The project uses a vanilla HTML, CSS, and JavaScript frontend. The Style
-Studio Quiz does not require a frontend framework or an additional
-JavaScript library.
+| Technology | Purpose |
+|---|---|
+| HTML5 | Structure and content of web pages |
+| CSS3 | Styling, layouts, animations and responsive design |
+| JavaScript | Interactive features, quiz logic and page functionality |
+| Google Fonts | Website typography |
+| Visual Studio Code | Development environment |
+| LocalStorage | Saving supported data in the browser |
 
-> **Project scope:** This is a frontend project. Unless connected to
-> real services, authentication, checkout, newsletter submission, and
-> order handling are demonstrations rather than production backend
-> services. No live payment processing is provided by the frontend
-> alone.
+VELORA is a **Vanilla HTML, CSS and JavaScript project**. It does not use React or any other frontend framework.
+
+**Project Scope:** This is a frontend project. Login, checkout, newsletter and order-related features are frontend demonstrations and do not include real backend services or live payment processing.
+
+---
 
 ## 📁 Project Structure
 
-``` text
+```text
 VELORA/
+│
 ├── images/
-│   ├── campaign.jpg
-│   ├── dress.jpg
-│   ├── editorial.jpg
-│   ├── heels.jpg
-│   ├── hero.jpg
-│   ├── jeans.jpg
-│   ├── skirt.jpg
-│   └── story.jpg
+│   └── (website images and product images)
+│
 ├── videos/
 │   └── main.mp4
+│
 ├── index.html
 ├── style.css
 ├── script.js
+│
+├── shop.html
+├── shop.css
+├── shop.js
+│
 ├── cart.html
 ├── cart.css
 ├── cart.js
+│
 ├── checkout.html
 ├── checkout.css
 ├── checkout.js
+│
 ├── login.html
 ├── login.css
 ├── login.js
+│
 ├── order-history.html
 ├── order-history.css
 ├── order-history.js
+│
 ├── quiz.html
 ├── quiz.css
 ├── quiz.js
+│
 ├── search.css
 ├── search.js
+│
 ├── wishlist.html
 ├── wishlist.css
 ├── wishlist.js
+│
 └── README.md
 ```
 
-Keep the `images/` and `videos/` folders in the project root so that
-relative media paths continue to work. This tree reflects the file list
-shared for the project; update it if the repository changes.
+*The images folder contains the website's image assets. Keep the images and videos folders in the project root so that relative media paths continue to work.*
+
+---
 
 ## 🚀 Getting Started
 
-### 1. Clone the repository
+### 1. Clone the Repository
 
-``` bash
-git clone https://github.com/navyanarang51/Velora
+```bash
+git clone https://github.com/navyanarang51/Velora.git
 ```
 
+### 2. Open the Project
 
-### 2. Open the project
+Open the downloaded VELORA folder in Visual Studio Code.
 
-Open the `VELORA` folder in Visual Studio Code.
+### 3. Run the Website
 
-### 3. Run the website
+1. Install the **Live Server** extension in VS Code.
+2. Open `index.html`.
+3. Right-click and select **Open with Live Server**.
+4. The website will open in your browser.
 
-Recommended: use the **Live Server** extension in VS Code and open
-`index.html`.
+You can also open `index.html` directly in a browser, but Live Server is recommended during development.
 
-Alternatively, open `index.html` directly in a browser. Live Server is
-preferable during development because it serves the files from a local
-web server.
+### 4. Open the Style Studio Quiz
 
-### 4. Explore the Style Studio
+1. Open the VELORA homepage.
+2. Select **Quiz** from the navigation bar.
+3. Answer all 10 questions.
+4. View the generated style profile and outfit recommendations.
 
-Use the **Quiz** link in the website navigation to open `quiz.html`.
-Answer the 10 questions to view the generated style profile and
-recommendations.
+---
 
-## 🎯 Quiz Recommendation Logic
+## 🎯 Style Studio Quiz Logic
 
-The Style Studio uses JavaScript to evaluate the user's selected answers
-and generate a style profile.
+The Style Studio Quiz uses JavaScript to evaluate the user's selected answers and generate a style profile.
 
--   **Aesthetic:** identifies a dominant fashion style from the selected
-    preferences.
--   **Colour palette:** presents a coordinated colour scheme.
--   **Mood:** reflects the selected fashion mood.
--   **Budget:** uses the selected price range when evaluating sample
-    products, where implemented.
--   **Occasion:** influences recommendation scoring.
--   **Style edit:** displays products that match the generated profile
-    from the available sample collection.
+- **Aesthetic:** Identifies the style that best matches the selected preferences.
+- **Colour Palette:** Shows a colour combination based on the user's choices.
+- **Mood:** Represents the selected fashion mood.
+- **Budget:** Considers the preferred shopping budget.
+- **Occasion:** Uses the selected occasion when preparing recommendations.
+- **Style Edit:** Displays matching products from the available sample collection.
 
-The quiz uses predefined questions, style profiles, product data, and
-local image paths. It does **not** use AI, a backend, or a live product
-database.
+The quiz uses predefined questions, style profiles, product data and JavaScript-based recommendation logic.
+
+It does **not** use AI, a backend or a live product database.
+
+---
 
 ## 📱 Responsive Design
 
-The interface is designed to adapt to smaller screens through features
-such as: - Flexible navigation. - Mobile-friendly quiz questions and
-controls. - Responsive result and product grids. - Adjusted typography,
-spacing, and layout for mobile devices.
+The website is designed to adjust to different screen sizes.
+
+Responsive features include:
+
+- Mobile-friendly navigation.
+- Flexible page layouts.
+- Responsive product grids.
+- Quiz questions and controls suited to smaller screens.
+- Adjusted typography and spacing.
+- Responsive homepage sections and footer.
+
+---
 
 ## 🔮 Future Improvements
 
--   Connect all pages to a shared product catalogue.
--   Add individual product detail pages.
--   Expand product search, filtering, and category browsing.
--   Improve cart and checkout validation.
--   Store quiz results and user preferences more consistently.
--   Integrate secure authentication and backend services.
--   Add real order management and a trusted payment provider.
--   Expand the recommendation catalogue and scoring logic.
--   Connect newsletter submissions to an email service.
--   Add automated testing and accessibility checks.
+- Add individual product detail pages.
+- Improve product search and filtering.
+- Connect all pages to a shared product catalogue.
+- Improve cart and checkout validation.
+- Save quiz results and user preferences.
+- Add backend services and secure authentication.
+- Add real order management and a payment gateway.
+- Connect newsletter submissions to an email service.
+- Improve accessibility and add automated testing.
+
+---
 
 ## 👩‍💻 Project Information
 
--   **Project:** VELORA --- Fashion E-commerce Frontend
--   **Category:** Web Development / Frontend Development
--   **Technologies:** HTML, CSS, JavaScript
--   **Development environment:** Visual Studio Code
+| Detail | Description |
+|---|---|
+| Project Name | VELORA |
+| Project Type | Fashion E-Commerce Frontend |
+| Category | Web Development |
+| Technologies | HTML5, CSS3 and JavaScript |
+| Development Environment | Visual Studio Code |
+| Main Feature | Style Studio Quiz |
 
-------------------------------------------------------------------------
+---
 
-*VELORA is a frontend project created to explore fashion-focused UI
-design, responsive web development, and interactive shopping
-experiences.*
+*VELORA is a frontend project created to explore fashion-focused UI design, responsive web development and interactive shopping experiences.*
+
+**More Than Fashion — It's Your Style.** 🤎
